@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;700;900&family=Playfair+Display:wght@400;600;900&display=swap');
+@import url('webfontkit-20230124-215122/stylesheet.css');
+
+:root {
+    --color1: #21d7ff;
+    --color2: #57e80c;
+    --color3: #ffa800;
+    --color4: #e80c34; 
+    --color5: #3630ff;
+    --color-gris-oscuro: #333333;
+    --color-gris-claro: #ccc;
+    --color-blanco: #ffffff;
+    --color-negro: #000000;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: 200;
+    letter-spacing: -2px;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h2::after{
+    content: " ";
+    background-color: var(--color4);
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: uppercase;
+}
+
+#main-header{
+    background-color: var(--color3);
+    color: var(--color-negro);
+}
+
+#main-header p{
+    margin-bottom: 0;
+}
+
+#main-banner{
+    margin-top: -56px;
+}
+
+#nosotros{
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+}
+
+#nosotros .container{
+    position: relative;
+}
+
+#aviso{
+    background-image: url("../images/concierto2.jpg");
+    background-size: cover;
+    background-position: right top;
+}
+
+#aviso p{
+    line-height: 0.9em;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: var(--color-blanco);
+    text-shadow: 3px 3px var(--color-negro)
+}
+
+#noticias h3{
+    background-image: linear-gradient(45deg, var(--color1), var(--color2), var(--color4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#noticias figure{
+    overflow: hidden;
+}
+
+#noticias img{
+    transition: .5s ease-in-out all;
+}
+
+#noticias img:hover{
+    transform: scale(1.3,1.3);
+}
+
+#btnBlancoNegro{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+#conferencia{
+    background-color: var(--color-negro);
+    color: var(--color-gris-claro);
+}
+
+#conferencia figure{
+    margin-bottom: -50px;
+    position: relative;
+    margin-top: -50px;
+}
+
+#conferencia img{
+    border-radius: 15px 15px 0 0;
+}
+
+.imagen-leyenda figcaption{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.7) 10%, transparent 70%);
+    color: var(--color-blanco);
+    padding: 30px;
+    width: calc(100% - 24px);
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all.5s ease-in-out;
+}
+
+.imagen-leyenda figcaption:hover{
+    opacity: 1;
+}
+
+#historia{
+    /* background-color: var(--color4); */
+    color: var(--color-blanco);
+    background-image: linear-gradient(45deg, var(--color3), var(--color4));
+    transform: skewY(-4deg);
+}
+
+#historia .container{
+    transform: skewY(4deg);
+}
+
+#valores{
+    background-color: var(--color1);
+    color: var(--color-negro);
+    text-align: center;
+}
+
+#valores h2::after{
+    left: 50%;
+    margin-left: -30px;
+}
+
+#valores article{
+    border: solid 1px var(--color4);
+    margin: 0 5px;
+    padding-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+    transition: all .5s ease-in-out;
+}
+
+#valores article:hover{
+    box-shadow: 0 8px 15px rgb(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+#valores i{
+    background-color: var(--color4);
+    color: var(--color-negro);
+    font-size: 2rem;
+    border: solid 1px;
+    border-radius: 50%;
+    padding: 8px 15px;
+    margin: 15px 10px;
+    display: inline-block;
+}
+
+#eventos{
+    background-color: var(--color2);
+    color: var(--color-negro);
+}
+
+#eventos article{
+    border: solid 10px rgb(255, 255, 255, 0.3);
+    margin: 0 5px;
+    padding-top: 15px;
+    border-image: linear-gradient(45deg, var(--color5), var(--color3), var(--color4)) 1;
+}
+
+#anuncio{
+    background-image: url("../images/familia1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#anuncio p{
+    line-height: 0.9em;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: var(--color-blanco);
+    text-shadow: 3px 3px var(--color-negro)
+}
+
+#galeria figure{
+    margin-bottom: 0;
+    position: relative;
+}
+
+#galeria img{
+    /* filter: grayscale(1);*/
+    /* border-radius: 50%; */
+}
+
+#galeria img:hover{
+    filter: grayscale(0);
+    transition: .5s ease-in-out all;
+    transform: rotate(-10deg);
+}
+
+#galeria figcaption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    display: none;
+    color: var(--color-blanco);
+}
+
+#galeria figcaption div{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#galeria figcaption div i{
+    cursor: pointer;
+}
+
+#fondo-oscuro{
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-blanco);
+}
+
+#fondo-oscuro img{
+    width: auto;
+    height: 75%;
+    border: solid 10px rgba(255,255,255,0.1);
+}
+
+#videos{
+    background-color: var(--color-negro);
+    color: var(--color-gris-claro);
+}
+
+#main-footer{
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-gris-claro);
+    padding: 45px 0; /* arriba y abajo / izquierda y derecha */
+}
+
+#ir-arriba{
+    position: fixed;
+    background-color: var(--color3);
+    color: var(--color-negro);
+    padding: 15px 20px;
+    right: 20px;
+    bottom: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    transition: .5s all ease-in-out;
+    animation: mover-ir-arriba 3s cubic-bezier(0.92,-0.27, 0.18, 1.39);
+}
+
+#ir-arriba:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+    bottom: 65px;
+}
+
+.padded{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.bg-isil{
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.carousel-indicators [data-bs-target]{
+    height: 30px;
+    border-radius: 50%;
+}
+
+.alinear-vertical-inferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.carousel-caption{
+    bottom: 4rem! important;
+}
+
+.carousel-caption h5{
+    font-size: 64px;
+    font-family: dream_orphansregular;
+    text-shadow: 3px 3px var(--color3);
+}
+
+.btn-success{
+    background-color: var(--color3);
+    border-color: var(--color3);
+    border-radius: 50px;
+}
+
+.btn-success:hover{
+    background-color: var(--color4);
+    border-color: var(--color4);
+}
+
+.btn-success:active{
+    background-color: var(--color-negro)!important;
+    border-color: var(--color1)!important;
+}
+
+.texto-importante{
+    color: var(--color3);
+}
+
+@keyframes mover-ir-arriba{
+    from{bottom: 1000px}
+    to{bottom: 60px}
+}
+
+@media(min-width:1600px){ /* Media Queries */
+    .container{
+        max-width: 1440px;
+    }
+}
+
+@media(max-width:991px){ 
+    #conferencia{
+        padding: 90px 0;
+    }
+    #conferencia figure{
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width:991px){ 
+    .padded, #conferencia{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
